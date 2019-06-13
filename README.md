@@ -1,5 +1,3 @@
-### 03.08.2017 | Universität Jena
-
 # Anwendungsbeispiele für Graphdatenbanken in Projekten der Digitalen Akademie
 
 ## Ein Werkstattbericht
