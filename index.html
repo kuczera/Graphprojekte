@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Das Cultural Heritage Framework</title>
+    <title>Graphentechnologien in den digitalen Geisteswissenschaften</title>
 
     <!-- meta information -->
-    <meta name="author" content="Torsten Schrade" />
+    <meta name="author" content="Andreas Kuczera" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -64,28 +64,27 @@
     <div id="impress">
 
         <div class="step">
-            <h5 class="down-25"><strong>03.08.2017</strong> | <a href="http://www.histinst.uni-jena.de/Bereiche/Geschlechtergeschichte/Projekte/Editionsportal+Th%C3%BCringen+.html">Workshop "Editionsportale"</a></h5>
-            <h5 class="up-25"><strong>Friedrich-Schiller-Universität Jena</strong></h5>
+            <h5 class="up-25"><strong>Akademie der Wissenschaften und der Literatur | Mainz</strong></h5>
 
             <h1 class="down-50" style="font-size: 72px;">
-                Sammlungs- und Editionsportale mit dem Cultural Heritage Framework der Digitalen Akademie
+                Graphentechnologien in den digitalen Geisteswissenschaften
             </h1>
 
             <h2 class="red">Ein Werkstattbericht</h2>
 
             <h4 class="down-50">
                 <strong>Slides:</strong>
-                <a href="https://digicademy.github.io/2017-editionsportale-jena" title="View the presentation online">
-                    https://digicademy.github.io/2017-editionsportale-jena
+                <a href="https://kuczera.github.io/Graphprojekte/" title="View the presentation online">
+                    https://kuczera.github.io/Graphprojekte/
                 </a>
             </h4>
 
             <h5>
-                <strong><a href="https://orcid.org/0000-0002-0953-2818">Torsten Schrade, Mainz</a></strong> |
+                <strong><a href="https://orcid.org/0000-0003-1020-507X">Andreas Kuczera, Mainz/Gießen</a></strong> |
                 <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter" class="twitter-icon" />
-                <a href="https://twitter.com/digicademy" title="Digital Academy on Twitter">@digicademy</a> |
+                <a href="https://twitter.com/andreaskuczera" title="Andreas Kuczera on Twitter">@andreaskuczera</a> |
                 <img src="resources/img/Octicons-mark-github.svg" alt="Twitter" class="gh-icon" />
-                <a href="https://github.com/digicademy/" title="Digital Academy on GitHub">digicademy</a> |
+                <a href="https://github.com/kuczera/" title="Andreas Kuczera on GitHub">kuczera</a> |
                 <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
             </h5>
         </div>
@@ -94,16 +93,16 @@
             <h2>Gliederung</h2>
             <ol class="line-height-one-five">
                 <li>
-                    Forschungsgegenstände, Digitale Akademie und Portalbegriff
+                    Forschungsgegenstände, Digitale Akademie und Graphen
                 </li>
                 <li>
-                    Charakteristika von Editions- und Sammlungsportalen an Beispielen
+                    Charakteristika von Projekten im Akademienprogramm
                 </li>
                 <li>
-                    Das Cultural Heritage Framework (CHF) im Überblick
+                    Graphmodelle in Beispielprojekten
                 </li>
                 <li>
-                    Das CHF im Einsatz bei der Digitalen Edition der Augsburger Baumeisterbücher
+                    Geisteswissenschaftliche Graphen am Beispiel der Regesta Imperii
                 </li>
             </ol>
         </div>
@@ -222,28 +221,26 @@
         </div>
 
         <div class="step">
-            <h2>Portalbegriff</h2>
+            <h2>Graphen in den digitalen Geisteswissenschaften</h2>
             <h3 class="red up-25">
-                Einige Definitionen
+                Definitionen
             </h3>
             <blockquote class="justify" lang="de">
-                Der Ausdruck Portal [...] bezeichnet in der Informatik ein Anwendungssystem, das sich durch die Integration
-                von Anwendungen, Prozessen und Diensten auszeichnet. Ein Portal stellt seinem Benutzer verschiedene Funktionen
-                zur Verfügung, wie beispielsweise Personalisierung, Navigation und Benutzerverwaltung. Außerdem koordiniert
-                es die Suche und die Präsentation von Informationen und soll die Sicherheit gewährleisten.
+              Eine Graphdatenbank (oder graphenorientierte Datenbank) ist eine Datenbank, die Graphen benutzt, um stark vernetzte Informationen darzustellen und abzuspeichern. Ein solcher Graph besteht aus Knoten und Kanten, den Verbindungen zwischen den Knoten. Die zwei bekanntesten Konzepte für Graphdatenbanken sind das Resource Description Framework (RDF) und Labeled-Property Graph (LPG).
             </blockquote>
             <p class="x-small down-25">
                 Quelle:
-                <a href="https://de.wikipedia.org/wiki/Portal_(Informatik)">
-                     https://de.wikipedia.org/wiki/Portal_(Informatik)
+                <a href="https://de.wikipedia.org/wiki/Graphdatenbank">
+                     https://de.wikipedia.org/wiki/Graphdatenbank
                 </a>
             </p>
             <blockquote class="justify down-50" lang="de">
-                Charakterisierend für Portale ist die Verknüpfung und der Datenaustausch zwischen heterogenen Anwendungen
-                über eine Portalplattform.
+              Die Entwicklung von Graphdatenbanken rührt von dem Bedürfnis her, reale Sachverhalte in Datenbanken zu speichern, ohne künstliche Konstrukte zu erzeugen (z. B. Primär-Fremdschlüssel, Relationstabellen) oder die Informationen aufzuteilen (z. B. in die Dritte Normalform). Mit Graphdatenbanken sollen Objekte und deren Beziehungen untereinander in „natürlicher“ Art und Weise zusammengehörig gespeichert werden. Dabei entsteht eine Vernetzung der Daten, die unserem Denken ähnlich ist, in dem Objekte (z. B. Personen, Mitarbeiter) in Beziehung zu uns anderen bekannten Objekten (z. B. Familie, Firma) gesetzt werden.
             </blockquote>
             <p class="x-small down-25">
-                Quelle: Kirchhof et al.: "Was ist ein Portal?" – Definition und Einsatz von Unternehmensportalen.
+                Quelle: <a href="http://www.datenbanken-verstehen.de/lexikon/graphdatenbanken/">
+                     http://www.datenbanken-verstehen.de/lexikon/graphdatenbanken/
+                </a>
             </p>
         </div>
 
