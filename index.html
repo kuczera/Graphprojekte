@@ -261,54 +261,61 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" data-hash="/step-8/substep-1">
                         <div class="six columns first">
-                            <a href="http://www.regesta-imperii.de/regesten" title="Regestenapplikation der Regesta Imperii">
-                                <img class="pull-up" src="resources/img/onlineapp-ri.png" width="100%" />
+                            Netzwerkschema eines Briefwechsels
+                                <img class="pull-up" src="resources/img/Augustinus.svg" width="100%" />
                             </a>
                             <p class="centered pull-up">
-                                Website: <a href="http://www.regesta-imperii.de/regesten">http://www.regesta-imperii.de/regesten</a>
+                                Projektwebseite: <a href="http://www.adwmainz.de/projekte/augustinus-lexikon/beschreibung.html">http://www.adwmainz.de/projekte/augustinus-lexikon/beschreibung.html</a>
                             </p>
                         </div>
                         <div class="six columns last">
-                            <h5><strong>Regesta Imperii Online</strong></h5>
+                            <h5><strong>Augustins Briefnetzwerk</strong></h5>
                             <ul class="even-left medium">
                                 <li>
-                                    Datenbank mit 173.000 Urkundenregesten im Volltext
+                                    Datenbank mit 314 Briefen
                                 </li>
                                 <li>
-                                    Literaturdatenbank mit 1.7 Mio Titeln zum europäischen Mittelalter
+                                    strukturiert erschlossen über 17 Schlüsselwörter
                                 </li>
                                 <li>
-                                    Komplexe boolsche Suchlogik mit Schreibweisentoleranz
+                                    mit 200 erschlossenen Personen
                                 </li>
                                 <li>
-                                    Alle Regesten in CEI via systemneutraler REST-Schnittstelle (Lizenz CC-BY)
-                                </li>
+                                  <pre>
+                                    <code class="linenumbers js">
+                                      MATCH (n:Keyword)<-[:KEYWORD]-(l:Letter)
+                                      WHERE n.name = 'Häretiker'
+                                      RETURN *;
+                                    </code>
+                                  </pre>
                             </ul>
+                            <p class="right">
+                              <a href=http://134.176.70.65:12070/browser/>
+                                <img class="pull-up" src="resources/img/neo4j_logo.svg" width="10%" height="10%" />
+                              </a>
+                            </p>
                         </div>
                     </div>
                     <div class="swiper-slide" data-hash="/step-8/substep-2">
                         <div class="six columns first">
-                            <a href="http://www.corpusvitrearum.de" title="Digitales Bildarchiv des Corpus Vitrearum">
-                                <img class="pull-up" src="resources/img/onlineapp-cvma.png" width="100%" />
+                            <a href="http://www.neg.uni-tuebingen.de/?q=de" title="Nomen et Gens">
+                                <img class="pull-up" src="resources/img/Nomen_et_Gens.svg" width="100%" />
                             </a>
                             <p class="centered pull-up">
-                                Website: <a href="http://www.corpusvitrearum.de">http://www.corpusvitrearum.de</a>
+                                Projektwebseite: <a href="http://www.neg.uni-tuebingen.de/?q=de">http://www.neg.uni-tuebingen.de/?q=de</a>
                             </p>
                         </div>
                         <div class="six columns last">
-                            <h5><strong>Corpus Vitrearum Digital</strong></h5>
+                            <h5><strong>Nomen et Gens</strong></h5>
                             <ul class="even-left medium">
                                 <li>
-                                    Hochauflösende TIFF-Bilder zum freien Download (CC-BY)
+                                    Das Projekt sammelt schriftlich belegte Personen von 400 bis 800
                                 </li>
                                 <li>
-                                    Metadaten eingebettet als XMP (ISO-Standard)
+                                    U.a. werden die Belege und weitere Informationen zu den Personen gesammelt
                                 </li>
                                 <li>
-                                    Inhaltliche Erschließung mit kontrollierem Vokabular (ICONCLASS)
-                                </li>
-                                <li>
-                                    REST-Schnittstellen für Metadaten in XMP und JSON-LD (Semantic Web)
+                                    Im Beispielgraph wurden Belege, Quellen, Personen und Verwandtschaft modelliert
                                 </li>
                             </ul>
                         </div>
