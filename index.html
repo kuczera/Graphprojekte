@@ -332,32 +332,39 @@
                     </div>
                     <div class="swiper-slide" data-hash="/step-8/substep-3">
                         <div class="six columns first">
-                            <a href="http://www.inschriften.net" title="Deutsche Inschriften Online">
-                                <img class="pull-up" src="resources/img/onlineapp-di.png" width="100%" />
+                            <a href="http://www.regesta-imperii.de" title="Regesta Imperii">
+                                <img class="pull-up" src="resources/img/ReggF3-WikidataPersons.svg" width="100%" />
                             </a>
                             <p class="centered pull-up">
-                                Website: <a href="http://www.inschriften.net/">http://www.inschriften.net</a>
+                                Website: <a href="http://www.regesta-imperii.de/">http://www.regesta-imperii.de</a>
                             </p>
                         </div>
                         <div class="six columns last">
-                            <h5><strong>Deutsche Inschriften Online</strong></h5>
+                            <h5><strong>Regesta Imperii</strong></h5>
                             <ul class="even-left medium">
                                 <li>
-                                    42 Inschriftenbände bzw. -bestände mit ca. 17.000 Katalognummern und 18.000
-                                    Abbildungen
+                                    Deutschsprachige Zusammenfassungen (Regest) der rechtlich relevanten Inhalte von Kaiser-, König und Papsturkunden
                                 </li>
                                 <li>
-                                    Flexible XML Workflows zur Überführung der Banddaten in die Applikation
+                                    Wurde 1829 vom Frankfurter Stadtbibliothekar Johann Friedrich Böhmer begründet
                                 </li>
                                 <li>
-                                    Persistente Referenzierung aller Artikel mittels URN der Deutschen Nationalbibliothek
+                                    Inzwischen über 140.000 Regesten im Volltext online verfügbar
                                 </li>
                                 <li>
-                                    Standardkonforme Ausgabe der Kataloartikel als TEI/EpiDoc via REST-Interface
+                                    Register werden sukzessive digital aufgearbeitet und eingebunden
+                                </li>
+                                <li>
+                                  MATCH (n:IndexPerson)-[:APPEARS_IN]->(r:Regesta)<-[:ACTION]-(l:Lemma)
+                                  WHERE n.label STARTS WITH 'Niklas (III.)'
+                                  RETURN l.lemma AS Lemma, count(*) AS Anzahl ORDER BY Anzahl DESC;
+                                </li>
+                                <li>
+                                  <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/RI.html">Beispiel aus den Regesten Heinrichs IV.</a>
                                 </li>
                             </ul>
                             <p class="right">
-                              <a href=http://134.176.70.65:12070/browser/>
+                              <a href=http://134.176.70.65:12060/browser/>
                                   <div class="row">
                                       <div class="four columns">
                                           <img class="pull-up" src="resources/img/neo4j_logo.svg"/>
@@ -439,19 +446,19 @@
                     </div>
                     <div class="swiper-slide" data-hash="/step-8/substep-6">
                         <div class="six columns first">
-                            <a href="http://www.namenforschung.net" title="Digitales Familiennamenwörterbuch Deutschlands">
-                                <img class="pull-up" src="resources/img/onlineapp-dfd.png" width="100%" />
+                            <a href="" title="Graphbasierte Analyse der Panama Papers">
+                                <img class="pull-up" src="resources/img/Panama-Beispiel.svg" width="100%" />
                             </a>
                             <p class="centered pull-up">
-                                Website: <a href="http://www.namenforschung.net/">http://www.namenforschung.net</a>
+                                Website: <a href="https://www.icij.org/investigations/panama-papers/the-power-players/">https://www.icij.org/investigations/panama-papers/the-power-players/</a>
                             </p>
                         </div>
                         <div class="six columns last">
-                            <h5><strong>Digitales Familiennamenwörterbuch</strong></h5>
+                            <h5><strong>Die Panama Papers</strong></h5>
                             <ul class="even-left medium">
                                 <li>
-                                    Digitale Editionsumgebung, basierend auf nativer XML-Datenbank,
-                                    Erfassung der Namenartikel in TEI
+                                    2,6 TB an Daten, das sind
+                                    11,5 Millionen E-Mails, Briefe, Faxnachrichten, Gründungsurkunden, Kreditverträge, Rechnungen und Bankauszüge als PDF-, Text- sowie Bilddateien aus den Jahren 1977 bis 2016
                                 </li>
                                 <li>
                                     Kartenapplikation zur Kartierung der Familiennamen auf Basis
