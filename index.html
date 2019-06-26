@@ -300,7 +300,7 @@
                     </div>
                     <div class="swiper-slide" data-hash="/step-8/substep-2">
                         <div class="six columns first">
-                            <a href="http://www.neg.uni-tuebingen.de/?q=de" title="Nomen et Gens">
+                            <a href="resources/img/Nomen_et_Gens.svg" title="Nomen et Gens">
                                 <img class="pull-up" src="resources/img/Nomen_et_Gens.svg" width="100%" />
                             </a>
                             <p class="centered pull-up">
@@ -333,7 +333,7 @@
                     </div>
                     <div class="swiper-slide" data-hash="/step-8/substep-3">
                         <div class="six columns first">
-                            <a href="http://www.regesta-imperii.de" title="Regesta Imperii">
+                            <a href="resources/img/ReggF3-WikidataPersons.svg" title="Regesta Imperii">
                                 <img class="pull-up" src="resources/img/ReggF3-WikidataPersons.svg" width="100%" />
                             </a>
                             <p class="centered pull-up">
@@ -356,16 +356,17 @@
                                     Register werden sukzessive digital aufgearbeitet und eingebunden
                                 </li>
                                 <li>
-                                  MATCH (n:IndexPerson)-[:APPEARS_IN]->(r:Regesta)<-[:ACTION]-(l:Lemma)
-                                  WHERE n.label STARTS WITH 'Niklas (III.)'
-                                  RETURN l.lemma AS Lemma, count(*) AS Anzahl ORDER BY Anzahl DESC;
+                                  // Robert II. von Flandern mit Netzwerk
+                                  MATCH (n:IndexPerson)-[:PERSON_IN]->(r:Regesta)<-[:PERSON_IN]-(m:IndexPerson)
+                                  WHERE n.registerId = 'H4P01822'
+                                  RETURN *;
                                 </li>
                                 <li>
                                   <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/RI.html">Beispiel aus den Regesten Heinrichs IV.</a>
                                 </li>
                             </ul>
                             <p class="right">
-                              <a href=http://134.176.70.65:12060/browser/>
+                              <a href=http://134.176.70.65:10200/browser/>
                                   <div class="row">
                                       <div class="four columns">
                                           <img class="pull-up" src="resources/img/neo4j_logo.svg"/>
@@ -377,31 +378,34 @@
                     </div>
                     <div class="swiper-slide" data-hash="/step-8/substep-4">
                         <div class="six columns first">
-                            <a href="http://www.controversia-et-confessio.de" title="Quellendatenbank zur Bekenntnisbildung und Konfessionalisierung">
-                                <img class="pull-up" src="resources/img/onlineapp-cc.png" width="100%" />
+                            <a href="resources/img/Meleager, Hunt for the Boar, sortiert.JPG" title="ReGroup - ">
+                                <img class="pull-up" src="resources/img/Meleager, Hunt for the Boar, sortiert.JPG" width="100%" />
                             </a>
-                            <p class="centered pull-up">
-                                Website: <a href="http://www.controversia-et-confessio.de">http://www.controversia-et-confessio.de</a>
-                            </p>
+                            <a href="resources/img/Meleager-Ident.png" title="ReGroup - ">
+                                <img class="pull-up" src="resources/img/Meleager-Ident.png" width="100%" />
+                            </a>
+                            <a href="resources/img/Meleager-Graph.png" title="ReGroup - ">
+                                <img class="pull-up" src="resources/img/Meleager-Graph.png" width="100%" />
+                            </a>
                         </div>
                         <div class="six columns last">
-                            <h5><strong>Controversia &amp; Confessio Digital</strong></h5>
+                            <h5><strong>ReGroup</strong></h5>
                             <ul class="even-left medium">
                                 <li>
-                                    Quellen- und Personendatenbank mit komplexen Beziehungen (Autoren, Gegner, Drucker, etc.)
+                                    ReGroup wendet Graphtechnologien in den geisteswissenschaftlichen Bilddisziplinen
                                 </li>
                                 <li>
-                                    Umfängliche Suchmöglichkeiten (rollenbasiert, chronologisch, geographisch)
+                                    Darstellungen von Figurengruppen in der römisch-kaiserzeitlichen Skulptur, z.B. Sarkophage oder figürliche Brunnen
                                 </li>
                                 <li>
-                                    Aufbereitung der Daten für die historische Netzwerkanalyse
+                                    Die digitale Graphanalyse wird mit den Funktionsweisen von drei analogen Methoden der Bilduntersuchung verglichen und derer Leistungsfähigkeit angepasst: Ikonographie, Semiotik, Bildwissenschaft
                                 </li>
                                 <li>
-                                    Webfrontend vollständig nach Responsive Web / Mobile First ansatz
+                                    Im Graph werden die Figuren mit ihren Eigenschaften und ihrem Kontext modelliert. Damit werden diese Informationen für Maschinen auswertbar und vergleichbar.
                                 </li>
                             </ul>
                             <p class="right">
-                              <a href=http://134.176.70.65:12070/browser/>
+                              <a href=http://134.176.70.65:11070/browser/>
                                   <div class="row">
                                       <div class="four columns">
                                           <img class="pull-up" src="resources/img/neo4j_logo.svg"/>
@@ -413,29 +417,31 @@
                     </div>
                     <div class="swiper-slide" data-hash="/step-8/substep-5">
                         <div class="six columns first">
-                            <a href="http://www.gluck-gesamtausgabe.de" title="Digitales Gluck Werkverzeichnis">
-                                <img class="pull-up" src="resources/img/onlineapp-gluck.png" width="100%" />
+                            <a href="resources/img/Berg-Ostasien.svg" title="Text as a Graph">
+                                <img class="pull-up" src="resources/img/Berg-Ostasien.svg" width="100%" />
                             </a>
                             <p class="centered pull-up">
-                                Website: <a href="http://www.gluck-gesamtausgabe.de/">http://www.gluck-gesamtausgabe.de</a>
+                                Website: <a href="https://argimenes.github.io/standoff-properties-editor/">SPEEDy</a>
                             </p>
                         </div>
                         <div class="six columns last">
-                            <h5><strong>Digitales Gluck Werkverzeichnis</strong></h5>
+                            <h5><strong>Text as a Graph - Standoff Properties</strong></h5>
                             <ul class="even-left medium">
                                 <li>
-                                    Bisher 70 ausführliche Werkbeschreibungen, 2000 Quellen aus 432 Archiven, über 1000 nachgewiesene
-                                    Personen (Sänger, Tänzer, Widmungsempfänger), 370 kartierte Spielorte
+                                    Bei Text as a Graph wird jedes Wort durch einen Knoten repräsentiert, der mit einer NEXT-Kante mit dem nächsten Wort verbunden ist. Damit ergibt sich eine Wortkette
                                 </li>
                                 <li>
-                                    Komplexe Suchfunktionalitäten für Werke und Quellen, Register für Spielorte, Archivorte und Personen
+                                    Annotationen werden an diese Wortkette mit anderen Kanten angelagert
                                 </li>
                                 <li>
-                                    Eigenständige bibliographische Suche nach Spezialliteratur zu Gluck
+                                    Text und Annotationen müssen damit keiner Hierarchie mehr folgen (wie bei XML) sondern können auch überlappende und mehrdimensionale Annotationshierarchien enthalten.
+                                </li>
+                                <li>
+                                    Das Browserplugin <a href="https://argimenes.github.io/standoff-properties-editor/">SPEEDy</a> (<a href="https://github.com/argimenes/standoff-properties-editor">Github</a>) bietet mit <a href="resources/img/SPEEDy.png">Standoff-Properties</a> eine Editorkomponente für das Text-as-a-Graph Modell
                                 </li>
                             </ul>
                             <p class="right">
-                              <a href=http://134.176.70.65:12070/browser/>
+                              <a href=http://134.176.70.65:10220/browser/>
                                   <div class="row">
                                       <div class="four columns">
                                           <img class="pull-up" src="resources/img/neo4j_logo.svg"/>
@@ -469,7 +475,7 @@
                                 </li>
                             </ul>
                             <p class="right">
-                              <a href=https://neo4j.com/blog/analyzing-panama-papers-neo4j/>
+                              <a href=https://neo4j.com/graphgist/the-panamapapers-example-dataset-president-of-azerbaijan#_family_ties_via_last_name>
                                   <div class="row">
                                       <div class="four columns">
                                           <img class="pull-up" src="resources/img/neo4j_logo.svg"/>
