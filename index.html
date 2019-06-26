@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Graphentechnologien in den digitalen Geisteswissenschaften</title>
+    <title>Graphprojekte</title>
 
     <!-- meta information -->
-    <meta name="author" content="Andreas Kuczera" />
+    <meta name="author" content="Torsten Schrade" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -22,11 +22,15 @@
 
     <!-- styles for included libraries -->
 
-    <!-- unite gallery -->
-    <link rel="stylesheet" href="vendor/unitegallery/css/unite-gallery.css" type="text/css" />
+    <!-- chartist -->
+    <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
 
-    <!-- swiper -->
-    <link rel="stylesheet" href="vendor/swiper/swiper.min.css" />
+    <!-- codemirror -->
+    <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+    <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
 
     <!-- magnific popup -->
     <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
@@ -93,139 +97,58 @@
           <h2>Gliederung</h2>
           <ol class="line-height-one-five">
               <li>
-                  Forschungsgegenstände, Digitale Akademie und Graphen
+                  Was ist ein Graph
               </li>
               <li>
-                  Charakteristika von Projekten im Akademienprogramm
+                  Definitionen
               </li>
               <li>
                   Graphmodelle in Beispielprojekten
               </li>
               <li>
-                  Geisteswissenschaftliche Graphen am Beispiel der Regesta Imperii
+                  Methodische Überlegungen
               </li>
           </ol>
       </div>
 
 
       <div class="step">
-          <h1 class="red">01</h1>
-          <h2 class="line-height-one-five">
-              Forschungsgegenstände, Digitale Akademie und Portalbegriff
-          </h2>
-      </div>
+    	    <div class="row">
+        	    <div class="twelve columns">
+                        <figure class="mfp-lightbox"><a href="resources/img/Beispielgraph.png"><img
+                                src="resources/img/Beispielgraph.png"
+                                alt="Karl der Große, Einhard und ein Buch"></a>
+                            <figcaption class="small">Beispielgraph: Karl der Große, Einhard und ein Buch</figcaption>
+                        </figure>
+	            </div>
+    	    </div>
+    	</div>
 
         <div class="step">
-            <h2>Forschungsgegenstände im Akademienprogramm</h2>
-            <h4 class="red up-25">Geisteswissenschaftliche Grundlagenforschung</h4>
-            <div id="researchdata" style="display:none;">
-                <a href="http://www.regesta-imperii.de/id/0797-03-31_1_0_1_1_0_920_336">
-                    <img alt="Geschichte: Urkunde Karls des Großen von 797"
-                         src="resources/img/forschungsdaten_thumbs_ri.png"
-                         data-image="resources/img/forschungsdaten_ri.jpg"
-                         data-description="Gemeinfrei. Wikimedia Commons. https://upload.wikimedia.org/wikipedia/commons/b/b1/Dipl%C3%B4me_de_Charlemagne_donn%C3%A9_le_31_mars_797._-_Archives_Nationales_-_AE-II-42.jpg"
-                         style="display:none">
-                </a>
+            <h1 class="red">01b</h1>
+            <h2>Erläuterungen</h2>
+            	<ul class="medium">
+                	<li class="substep">
+            			Der <a href="bilder/Beispielgraph.png">Beispielgraph</a> zeigt oben einen <b>Knoten (engl. Nodes)</b>
+            			vom Typ Person mit der Eigenschaft Name.
+            			Diese hat den Wert "Karl der Große".</li>
+                	<li class="substep">
+                		Links unten ist ein weiter <b>Knoten</b> vom Typ
+                		Person mit dem Namen "Einhard".</li>
+                	<li class="substep">
+                		Rechts unten ist ein <b>Knoten</b> vom Typ Buch und dem Titel "Vita Karoli Magni".
+                	</li>
+                	<li class="substep">
+                		Die <b>Kanten</b> (engl. Edges) geben an, dass Karl der Große Einhart kannte, Einhard ca. 828-830
+            			das Buch "Vita Karoli Magni" schrieb und Karl der Große in dem Buch
+            			vorkommt.
+                	</li>
+            	</ul>
 
-                <a href="http://id.corpusvitrearum.de/images/3515">
-                    <img alt="Kunstgeschichte: Glasmalerei"
-                         src="resources/img/forschungsdaten_thumbs_cvma.png"
-                         data-image="resources/img/forschungsdaten_cvma.jpg"
-                         data-description="Rüdiger Tonojan, CVMA Deutschland/Freiburg, CC-BY 4.0 (http://creativecommons.org/licenses/by/4.0/)"
-                         style="display:none">
-                </a>
-
-                <a href="http://nbn-resolving.de/urn:nbn:de:0238-di002mz00k0001208">
-                    <img alt="Epigraphik: Inschrift auf dem Mainzer Domportal"
-                         src="resources/img/forschungsdaten_thumbs_inschriften.png"
-                         data-image="resources/img/forschungsdaten_inschriften.jpg"
-                         data-description="Von Benutzer:Moguntiner - Dieses Foto wurde im Mai 2005 von Benutzer:Moguntiner aufgenommen und ist eine verbesserte Version des Bildes vom 21.03.05, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=23986757"
-                         style="display:none">
-                </a>
-
-                <a href="http://www.controversia-et-confessio.de/cc-digital.html">
-                    <img alt="Theologie: Religiöse Streitschriften"
-                         src="resources/img/forschungsdaten_thumbs_controversia.png"
-                         data-image="resources/img/forschungsdaten_controversia.jpg"
-                         data-description="Gemeinfrei. Wikimedia Commons. Eber-Epitaph in der Stadtkirche Wittenberg, gemalt von Lucas Cranach d. J. https://commons.wikimedia.org/wiki/File:Weinberg-WB-1569.jpg"
-                         style="display:none">
-                </a>
-
-                <a href="http://www.gluck-gesamtausgabe.de/id/1-38-00-0">
-                    <img alt="Musik: Autograph aus Glucks Oper Alceste"
-                         src="resources/img/forschungsdaten_thumbs_gluck.png"
-                         data-image="resources/img/forschungsdaten_gluck.jpg"
-                         data-description="Gemeinfrei. Wikimedia Commons. https://de.wikipedia.org/wiki/Christoph_Willibald_Gluck#/media/File:Christoph_Willibald_Gluck_-_Misero_e_che_far%C3%B2_from_Alceste._%28BL_Zweig_MS_34_f._1r%29.jpg"
-                         style="display:none">
-                </a>
-
-                <a href="http://www.namenforschung.net/id/name/30/1">
-                    <img alt="Linguistik: Kartierte Verteilung des Namens 'Meier'"
-                         src="resources/img/forschungsdaten_thumbs_dfd.png"
-                         data-image="resources/img/forschungsdaten_dfd.jpg"
-                         data-description="Namenforschung.Net"
-                         style="display:none">
-                </a>
-            </div>
         </div>
 
         <div class="step">
-            <h2 class="down-50">Die Digitale Akademie</h2>
-            <h4 class="red up-25">Digital Humanities Forschungsteam der Mainzer Akademie</h4>
-            <div class="row">
-                <div class="six columns">
-                    <a href="http://www.digitale-akademie.de/" style="position: relative; left: -10px;">
-                        <img src="resources/img/da-logo.png" alt="Logo der Digitalen Akademie" width="100%"/>
-                    </a>
-                    <blockquote class="justify x-small" style="position: relative; top: -20px;">
-                        Das Aufgabenspektrum umfasst die Konzeption, Gestaltung und Realisierung
-                        geisteswissenschaftlicher Applikationen und virtueller Forschungsumgebungen,
-                        die Beratung der Akademie zu allen Aspekten von Digitalisierungsvorhaben sowie
-                        die Projektbegleitung bei der Umsetzung digitaler Komponenten zusammen mit Partnern
-                        aus Wissenschaft und Wirtschaft.<br/>
-                        Gleichzeitig nimmt die Forschung an Kernfragen der Digitalen Geisteswissenschaften
-                        sowie die Lehre und Ausbildung des wissenschaftlichen DH-Nachwuchses einen hohen
-                        Stellenwert ein.
-                    </blockquote>
-                    <p class="x-small">
-                        <a href="http://www.digitale-akademie.de">http://www.digitale-akademie.de</a>
-                    </p>
-                </div>
-                <div class="six columns">
-                    <ul class="small down-50">
-                        <li class="substep">
-                            DH Forschung und DH Anwendungsorientierung
-                        </li>
-                        <li class="substep">
-                            Einbeziehung von Methoden aus der freien Wirtschaft und Softwareindustrie
-                        </li>
-                        <li class="substep">
-                            Team aus Geisteswissenschaftler_innen, Informatiker_innen und Mitarbeiter_innen
-                            mit dualer Qualifikation
-                        </li>
-                        <li class="substep">
-                            Standardisierung, <em>best practices</em>, Nachhaltikgeit
-                        </li>
-                        <li class="substep">
-                            24 Teammitglieder (Wissenschaftliche Mitarbeiter_innen, Trainees, studentische Mitarbeiter_innen)
-                        </li>
-                        <li class="substep">
-                            Akademie ist Gründungsmitglied des Mainzer Zentrums für Digitalität in den Geistes- und Kulturwissenschaften (mainzed)
-                        </li>
-                        <li class="substep">
-                            Aktiv in der DH-Lehre innerhalb des Masterstudiengangs "Digitale Methodik in den Geistes
-                            und Kulturwissenschaften"
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Graphen in den digitalen Geisteswissenschaften</h2>
-            <h3 class="red up-25">
-                Definitionen
-            </h3>
+            <h2>Definitionen</h2>
             <blockquote class="justify" lang="de">
               Eine Graphdatenbank (oder graphenorientierte Datenbank) ist eine Datenbank, die Graphen benutzt, um stark vernetzte Informationen darzustellen und abzuspeichern. Ein solcher Graph besteht aus Knoten und Kanten, den Verbindungen zwischen den Knoten. Die zwei bekanntesten Konzepte für Graphdatenbanken sind das Resource Description Framework (RDF) und Labeled-Property Graph (LPG).
             </blockquote>
@@ -236,11 +159,9 @@
                 </a>
             </p>
           </div>
+
           <div class="step">
-              <h2>Graphen in den digitalen Geisteswissenschaften</h2>
-              <h3 class="red up-25">
-                  Definitionen
-              </h3>
+            <h2>Definitionen</h2>
             <blockquote class="justify down-50" lang="de">
               Die Entwicklung von Graphdatenbanken rührt von dem Bedürfnis her, reale Sachverhalte in Datenbanken zu speichern, ohne künstliche Konstrukte zu erzeugen (z. B. Primär-Fremdschlüssel, Relationstabellen) oder die Informationen aufzuteilen (z. B. in die Dritte Normalform). Mit Graphdatenbanken sollen Objekte und deren Beziehungen untereinander in „natürlicher“ Art und Weise zusammengehörig gespeichert werden. Dabei entsteht eine Vernetzung der Daten, die unserem Denken ähnlich ist, in dem Objekte (z. B. Personen, Mitarbeiter) in Beziehung zu uns anderen bekannten Objekten (z. B. Familie, Firma) gesetzt werden.
             </blockquote>
@@ -251,26 +172,25 @@
             </p>
           </div>
 
-
-
         <div class="step">
-            <h2>Editions- und Sammlungsportale</h2>
-            <h4 class="red up-25">der Mainzer Akademie im Kurzüberblick</h4>
-            <!-- Swiper -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" data-hash="/step-8/substep-1">
-                        <div class="six columns first">
-                            Netzwerkschema eines Briefwechsels
-                            <a href="resources/img/Augustinus.svg" title="Netzwerkschema eines Briefwechsels">
-                                <img class="pull-up" src="resources/img/Augustinus.svg" width="100%" />
-                            </a>
-                            <p class="centered pull-up">
-                                Projektwebseite: <a href="http://www.adwmainz.de/projekte/augustinus-lexikon/beschreibung.html">http://www.adwmainz.de/projekte/augustinus-lexikon/beschreibung.html</a>
-                            </p>
-                        </div>
-                        <div class="six columns last">
-                            <h5><strong>Augustins Briefnetzwerk</strong></h5>
+            <h2>Graphmodelle</h2>
+            <h3 class="red up-25">
+                Briefnetzwerke
+            </h3>
+            <div class="row">
+              <div class="six columns first">
+              Netzwerkschema eines Briefwechsels
+              <figure class="mfp-lightbox"><a href="resources/img/Augustinus.svg"><img
+                      src="resources/img/Augustinus.svg"
+                      alt="Netzwerkschema eines Briefwechsels"></a>
+              </figure>
+              <p class="x-small down">
+                Projektwebseite: <a href="http://www.adwmainz.de/projekte/augustinus-lexikon/beschreibung.html">http://www.adwmainz.de/projekte/augustinus-lexikon/beschreibung.html
+                </a>
+              </p>
+            </div>
+
+            <div class="six columns last">
                             <ul class="even-left medium">
                                 <li>
                                     Datenbank mit 314 Briefen
@@ -282,9 +202,10 @@
                                     mit 200 erschlossenen Personen
                                 </li>
                                 <li>
-                                      MATCH (n:Keyword)<-[:KEYWORD]-(l:Letter)
-                                      WHERE n.name = 'Häretiker'
-                                      RETURN *;
+<pre><code class="linenumbers js">MATCH (n:Keyword)<-[:KEYWORD]-(l:Letter)
+WHERE n.name = 'Häretiker'
+RETURN *;
+</code></pre>
                                </li>
                             </ul>
                             <p class="right">
@@ -297,99 +218,128 @@
                               </a>
                             </p>
                         </div>
-                    </div>
-                    <div class="swiper-slide" data-hash="/step-8/substep-2">
-                        <div class="six columns first">
-                            <a href="resources/img/Nomen_et_Gens.svg" title="Nomen et Gens">
-                                <img class="pull-up" src="resources/img/Nomen_et_Gens.svg" width="100%" />
-                            </a>
-                            <p class="centered pull-up">
-                                Projektwebseite: <a href="http://www.neg.uni-tuebingen.de/?q=de">http://www.neg.uni-tuebingen.de/?q=de</a>
-                            </p>
-                        </div>
-                        <div class="six columns last">
-                            <h5><strong>Nomen et Gens</strong></h5>
-                            <ul class="even-left medium">
-                                <li>
-                                    Das Projekt sammelt schriftlich belegte Personen von 400 bis 800
-                                </li>
-                                <li>
-                                    U.a. werden die Belege und weitere Informationen zu den Personen gesammelt
-                                </li>
-                                <li>
-                                    Im Beispielgraph wurden Belege, Quellen, Personen und Verwandtschaft modelliert
-                                </li>
-                            </ul>
-                            <p class="right">
-                              <a href=http://134.176.70.65:12070/browser/>
-                                  <div class="row">
-                                      <div class="four columns">
-                                          <img class="pull-up" src="resources/img/neo4j_logo.svg"/>
+                  </div>
+            </div>
+
+            <div class="step">
+                <h2>Graphmodelle</h2>
+                <h3 class="red up-25">
+
+                </h3>
+                <div class="row">
+                  <div class="six columns first">
+                  Nomen et Gens - Verwandtschaft im Graphen
+                  <figure class="mfp-lightbox"><a href="resources/img/Nomen_et_Gens.svg"><img
+                          src="resources/img/Nomen_et_Gens.svg"
+                          alt="Nomen et Gens"></a>
+                  </figure>
+                  <p class="x-small down">
+                    Projektwebseite: <a href="http://www.neg.uni-tuebingen.de/?q=de">http://www.neg.uni-tuebingen.de
+                    </a>
+                  </p>
+                </div>
+
+                <div class="six columns last">
+                                <ul class="even-left medium">
+                                    <li class="substep">
+                                      <li>
+                                        Das Projekt sammelt schriftlich belegte Personen von 400 bis 800
+                                      </li>
+                                      <li>
+                                        U.a. werden die Belege und weitere Informationen zu den Personen gesammelt
+                                      </li>
+                                      <li>
+                                        Im Beispielgraph wurden Belege, Quellen, Personen und Verwandtschaft modelliert
+                                      </li>
+    <pre><code class="linenumbers js">MATCH (P:Person {nid:'7212'}) RETURN *;
+    </code></pre>
+                                   </li>
+                                </ul>
+                                <p class="right">
+                                  <a href=http://134.176.70.65:10075/browser/>
+                                      <div class="row">
+                                          <div class="four columns">
+                                              <img class="pull-up" src="resources/img/neo4j_logo.svg"/>
+                                          </div>
                                       </div>
-                                  </div>
-                              </a>
-                            </p>
-                        </div>
+                                  </a>
+                                </p>
+                            </div>
+                      </div>
+                </div>
+
+                <div class="step">
+                    <h2>Graphmodelle</h2>
+                    <h3 class="red up-25">
+
+                    </h3>
+                    <div class="row">
+                      <div class="six columns first">
+                      Regesta Imperii
+                      <figure class="mfp-lightbox"><a href="resources/img/ReggF3-WikidataPersons.svg"><img
+                              src="resources/img/ReggF3-WikidataPersons.svg"
+                              alt="Regesta Imperii"></a>
+                      </figure>
+                      <p class="x-small down">
+                        Projektwebseite: <a href="http://www.regesta-imperii.de">http://www.regesta-imperii.de
+                        </a>
+                      </p>
                     </div>
-                    <div class="swiper-slide" data-hash="/step-8/substep-3">
-                        <div class="six columns first">
-                            <a href="resources/img/ReggF3-WikidataPersons.svg" title="Regesta Imperii">
-                                <img class="pull-up" src="resources/img/ReggF3-WikidataPersons.svg" width="100%" />
-                            </a>
-                            <p class="centered pull-up">
-                                Website: <a href="http://www.regesta-imperii.de/">http://www.regesta-imperii.de</a>
-                            </p>
-                        </div>
-                        <div class="six columns last">
-                            <h5><strong>Regesta Imperii</strong></h5>
-                            <ul class="even-left medium">
-                                <li>
-                                    Deutschsprachige Zusammenfassungen (Regest) der rechtlich relevanten Inhalte von Kaiser-, König und Papsturkunden
-                                </li>
-                                <li>
-                                    Wurde 1829 vom Frankfurter Stadtbibliothekar Johann Friedrich Böhmer begründet
-                                </li>
-                                <li>
-                                    Inzwischen über 140.000 Regesten im Volltext online verfügbar
-                                </li>
-                                <li>
-                                    Register werden sukzessive digital aufgearbeitet und eingebunden
-                                </li>
-                                <li>
-                                  // Robert II. von Flandern mit Netzwerk
-                                  MATCH (n:IndexPerson)-[:PERSON_IN]->(r:Regesta)<-[:PERSON_IN]-(m:IndexPerson)
-                                  WHERE n.registerId = 'H4P01822'
-                                  RETURN *;
-                                </li>
-                                <li>
-                                  <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/RI.html">Beispiel aus den Regesten Heinrichs IV.</a>
-                                </li>
-                            </ul>
-                            <p class="right">
-                              <a href=http://134.176.70.65:10200/browser/>
-                                  <div class="row">
-                                      <div class="four columns">
-                                          <img class="pull-up" src="resources/img/neo4j_logo.svg"/>
-                                      </div>
-                                  </div>
-                              </a>
-                            </p>
-                        </div>
+
+                    <div class="six columns last">
+                                    <ul class="even-left medium">
+                                          <li>
+                                            Deutschsprachige Zusammenfassungen (Regest) der rechtlich relevanten Inhalte von Kaiser-, König und Papsturkunden
+                                          </li>
+                                          <li>
+                                            Wurde 1829 vom Frankfurter Stadtbibliothekar Johann Friedrich Böhmer begründet
+                                          </li>
+                                          <li>
+                                            Inzwischen über 140.000 Regesten im Volltext online verfügbar
+                                          </li>
+                                          <li>
+                                            Register werden sukzessive digital aufgearbeitet und eingebunden
+                                          </li>
+                                          <li><pre><code class="linenumbers js">// Robert II.  von Flandern mit Netzwerk
+MATCH (n:IndexPerson)-[:PERSON_IN]->(r:Regesta)<-[:PERSON_IN]-(m:IndexPerson)
+WHERE n.registerId = 'H4P01822'
+RETURN *;</code></pre>
+                                          </li>
+                                          <li>
+                                            <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/RI.html">Beispiel aus den Regesten Heinrichs IV.</a>
+                                          </li>
+                                      </ul>
+                                    <p class="right">
+                                      <a href=http://134.176.70.65:10200/browser/>
+                                          <div class="row">
+                                              <div class="four columns">
+                                                  <img class="pull-up" src="resources/img/neo4j_logo.svg"/>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </p>
+                                </div>
+                          </div>
                     </div>
-                    <div class="swiper-slide" data-hash="/step-8/substep-4">
-                        <div class="six columns first">
-                            <a href="resources/img/Meleager, Hunt for the Boar, sortiert.JPG" title="ReGroup - ">
-                                <img class="pull-up" src="resources/img/Meleager, Hunt for the Boar, sortiert.JPG" width="100%" />
-                            </a>
-                            <a href="resources/img/Meleager-Ident.png" title="ReGroup - ">
+
+                    <div class="step">
+                      <h2>Graphmodelle</h2>
+                        <h3 class="red up-25">
+                        </h3>
+                        <div class="row">
+                          <div class="six columns first">
+                            <a href="resources/img/Meleager-Ident.png" title="ReGroup - Identified Entities">
                                 <img class="pull-up" src="resources/img/Meleager-Ident.png" width="100%" />
                             </a>
-                            <a href="resources/img/Meleager-Graph.png" title="ReGroup - ">
+                            <a href="resources/img/Meleager-Graph.png" title="ReGroup - Graphmodell">
                                 <img class="pull-up" src="resources/img/Meleager-Graph.png" width="100%" />
                             </a>
-                        </div>
+                            <a href="resources/img/Meleager, Hunt for the Boar, sortiert.JPG" title="ReGroup - Jagd auf den kaledonischen Eber">
+                                <img class="pull-up" src="resources/img/Meleager, Hunt for the Boar, sortiert.JPG" width="100%" />
+                            </a>
+                          </div>
                         <div class="six columns last">
-                            <h5><strong>ReGroup</strong></h5>
+                          <h5><strong>ReGroup</strong></h5>
                             <ul class="even-left medium">
                                 <li>
                                     ReGroup wendet Graphtechnologien in den geisteswissenschaftlichen Bilddisziplinen
@@ -403,6 +353,8 @@
                                 <li>
                                     Im Graph werden die Figuren mit ihren Eigenschaften und ihrem Kontext modelliert. Damit werden diese Informationen für Maschinen auswertbar und vergleichbar.
                                 </li>
+                                <li><pre><code class="linenumbers js">MATCH (n1:IdentifiedScene {ISID:'3'})--(n2)--(n3)--(n4) RETURN *;</code></pre>
+                              </li>
                             </ul>
                             <p class="right">
                               <a href=http://134.176.70.65:11070/browser/>
@@ -414,13 +366,19 @@
                               </a>
                             </p>
                         </div>
-                    </div>
-                    <div class="swiper-slide" data-hash="/step-8/substep-5">
-                        <div class="six columns first">
-                            <a href="resources/img/Berg-Ostasien.svg" title="Text as a Graph">
+                  </div>
+                </div>
+
+                <div class="step">
+                  <h2>Graphmodelle</h2>
+                    <h3 class="red up-25">
+                    </h3>
+                    <div class="row">
+                      <div class="six columns first">
+                        <a href="resources/img/Berg-Ostasien.svg" title="Text as a Graph">
                                 <img class="pull-up" src="resources/img/Berg-Ostasien.svg" width="100%" />
                             </a>
-                            <p class="centered pull-up">
+                            <p class="x-small down">
                                 Website: <a href="https://argimenes.github.io/standoff-properties-editor/">SPEEDy</a>
                             </p>
                         </div>
@@ -449,14 +407,21 @@
                                   </div>
                               </a>
                             </p>
-                        </div>
+                      </div>
                     </div>
-                    <div class="swiper-slide" data-hash="/step-8/substep-6">
+                  </div>
+
+                  <div class="step">
+                    <h2>Graphmodelle</h2>
+                      <h3 class="red up-25">
+                        Die Panama Papers
+                      </h3>
+                      <div class="row">
                         <div class="six columns first">
                           <a href="resources/img/Panama-Beispiel.svg">
                               <img class="pull-up" src="resources/img/Panama-Beispiel.svg" width="100%" />
                           </a>
-                            <p class="centered pull-up">
+                            <p class="x-small down">
                                 Website: <a href="https://www.icij.org/investigations/panama-papers/the-power-players/">https://www.icij.org/investigations/panama-papers/the-power-players/</a>
                             </p>
                         </div>
@@ -484,480 +449,34 @@
                               </a>
                             </p>
                         </div>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Portalbegriff</h2>
-            <h3 class="red up-25">
-                Definition vor dem Projekthintergrund der Digitalen Akademie
-            </h3>
-            <blockquote class="justify" lang="de">
-                Geisteswissenschaftliche Editions- und Sammlungsportale integrieren Informationen, Nachrichten, Publikationen,
-                Datendienste, Medien sowie digitale Sammlungs- und Editionskomponenten zu Forschungsgegenständen unseres
-                kulturellen Erbes sowohl für eine wissenschaftliche Nutzerschaft als häufig auch für eine breitere Öffentlichkeit
-                auf der Grundlage von webbasierten Plattformen und Systemen.
-            </blockquote>
-        </div>
-
-        <div class="step">
-            <h1 class="red">02</h1>
-            <h2 class="line-height-one-five">
-                Charakteristika von Editions- und Sammlungsportalen an Beispielen
-            </h2>
-        </div>
-
-        <div class="step">
-            <h2>Charakteristika von Editions- und Sammlungsportalen an Beispielen</h2>
-            <h3 class="red up-25 after-25">Portalfeatures</h3>
-            <div class="row">
-                <div class="seven columns">
-                    <ul class="medium line-height-one-two-five">
-                        <li class="substep">
-                            Projektdarstellung
-                        </li>
-                        <li class="substep">
-                            Newsbereich + Newsfeeds
-                        </li>
-                        <li class="substep">
-                            Einbindung crossmedialer Inhalte
-                        </li>
-                        <li class="substep">
-                            Social Media Integration
-                        </li>
-                        <li class="substep">
-                            Artikelserien
-                        </li>
-                        <li class="substep">
-                            Publikationslisten
-                        </li>
-                        <li class="substep">
-                            Multilingualität
-                        </li>
-                        <li class="substep">
-                            Barrierearmut
-                        </li>
-                    </ul>
-                </div>
-                <div class="five columns mfp-lightbox">
-                    <a href="resources/img/portal-ri.png">
-                        <img src="resources/img/portal-ri.png" />
-                    </a>
-                    <a href="resources/img/portal-di.png">
-                        <img src="resources/img/portal-di.png" />
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Charakteristika von Editions- und Sammlungsportalen an Beispielen</h2>
-            <h3 class="red up-25 after-25">Redaktionssystem</h3>
-            <div class="row">
-                <div class="eight columns">
-                    <ul class="medium line-height-one-two-five">
-                        <li class="substep">
-                            Dezentrale Online-Redaktion
-                        </li>
-                        <li class="substep">
-                            Gute Content-Strukturierung
-                        </li>
-                        <li class="substep">
-                            Flexibles Templating-System
-                        </li>
-                        <li class="substep">
-                            Feingranulare Rechtevergabe
-                        </li>
-                        <li class="substep">
-                            Digital Asset Management
-                        </li>
-                        <li class="substep">
-                            Versionierung und Logging
-                        </li>
-                        <li class="substep">
-                            Konfigurierbare Publikationsworkflows
-                        </li>
-                    </ul>
-                </div>
-                <div class="four columns mfp-lightbox">
-                    <a href="resources/img/red-content.png">
-                        <img src="resources/img/red-content.png" />
-                    </a>
-                    <a href="resources/img/red-dam.png">
-                        <img src="resources/img/red-dam.png" />
-                    </a>
-                    <a href="resources/img/red-permissions.png">
-                        <img src="resources/img/red-permissions.png" />
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Charakteristika von Editions- und Sammlungsportalen an Beispielen</h2>
-            <h3 class="red up-25 after-25">Sammlungs- und Editionskomponente</h3>
-            <div class="row">
-                <div class="eight columns">
-                    <ul class="medium line-height-one-two-five">
-                        <li class="substep">
-                            Nahtlose Einbindungsmöglichkeiten
-                        </li>
-                        <li class="substep">
-                            Responsive Präsentationsschicht
-                        </li>
-                        <li class="substep">
-                            Permalinks / Zitierfähigkeit
-                        </li>
-                        <li class="substep">
-                            Versionierung
-                        </li>
-                        <li class="substep">
-                            Leistungsstarke Suche
-                        </li>
-                        <li class="substep">
-                            Import-/Exportmöglichkeiten
-                        </li>
-                        <li class="substep">
-                            Systemneutrale Formate
-                        </li>
-                        <li class="substep">
-                            Flexibles Link Handling
-                        </li>
-                        <li class="substep">
-                            Normdatenintegration
-                        </li>
-                        <li class="substep">
-                            Linked Open Data Integration
-                        </li>
-                    </ul>
-                </div>
-                <div class="four columns mfp-lightbox">
-                    <a href="resources/img/bmb_responsive.png">
-                        <img src="resources/img/bmb_responsive.png" />
-                    </a>
-                    <a href="resources/img/bmb_versions.png">
-                        <img src="resources/img/bmb_versions.png" />
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Charakteristika von Editions- und Sammlungsportalen an Beispielen</h2>
-            <h3 class="red up-25 after-25">Technische Infrastruktur</h3>
-            <div class="row">
-                <div class="eight columns">
-                    <ul class="medium line-height-one-two-five">
-                        <li class="substep">
-                            Microservices-Orientierung
-                        </li>
-                        <li class="substep">
-                            CQRS (Command Query Responsibility Segregation)
-                        </li>
-                        <li class="substep">
-                            Schnittstellen & Content Negotiation
-                        </li>
-                        <li class="substep">
-                            Continuous Delivery und Automationsfähigkeit (DevOps)
-                        </li>
-                    </ul>
-                </div>
-                <div class="four columns mfp-lightbox">
-                    <a href="resources/img/ri-infrastructure.png">
-                        <img src="resources/img/ri-infrastructure.png" />
-                    </a>
-                    <a href="resources/img/devops.png">
-                        <img src="resources/img/devops.png" />
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h1 class="red">03</h1>
-            <h2 class="line-height-one-five">
-                Das Cultural Heritage Framework (CHF)
-            </h2>
-        </div>
-
-        <div class="step">
-            <h2>Das Cultural Heritage Framework</h2>
-            <h3 class="red up-25 after-25">Komponenten im Überblick</h3>
-            <div class="row">
-                <div class="ten columns mfp-lightbox">
-                    <a href="resources/img/chf_core_large.png">
-                        <img src="resources/img/chf_core.png" />
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Das Cultural Heritage Framework</h2>
-            <h3 class="red up-25 after-25">Komponenten im Überblick</h3>
-            <div class="row">
-                <div class="ten columns mfp-lightbox">
-                    <a href="resources/img/chf_base_large.png">
-                        <img src="resources/img/chf_base.png" />
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Das Cultural Heritage Framework</h2>
-            <h3 class="red up-25 after-25">Komponenten im Überblick</h3>
-            <div class="row">
-                <div class="ten columns mfp-lightbox">
-                    <a href="resources/img/chf_structures_large.png">
-                        <img src="resources/img/chf_structures.png" />
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Das Cultural Heritage Framework</h2>
-            <h3 class="red up-25 after-25">Komponenten im Überblick</h3>
-            <div class="row">
-                <div class="ten columns mfp-lightbox">
-                    <a href="resources/img/chf_services_large.png">
-                        <img src="resources/img/chf_services.png" />
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Das Cultural Heritage Framework</h2>
-            <h3 class="red up-25 after-25">Komponenten im Überblick</h3>
-            <div class="row">
-                <div class="ten columns mfp-lightbox">
-                    <a href="resources/img/chf_customizations.png">
-                        <img src="resources/img/chf_customizations.png" />
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h1 class="red">04</h1>
-            <h2 class="line-height-one-five">
-                Das CHF im Einsatz bei der Digitalen Edition der Augsburger Baumeisterbücher
-            </h2>
-        </div>
-
-        <div class="step">
-            <h2>Technischer Aufbau</h2>
-            <h3 class="red up-25">Transcribo, FuD, TYPO3, Sphinxsearch</h3>
-            <div class="row">
-                <div class="seven columns">
-                    <div class="mfp-lightbox">
-                        <a href="resources/img/bmb_infrastructure.png">
-                            <img src="resources/img/bmb_infrastructure.png" alt="Screenshot" title="" />
-                        </a>
-                    </div>
-                </div>
-                <div class="five columns down-50">
-                    <ul class="small line-height-one-two-five">
-                        <li>Gefördert von der DFG, Projektlaufzeit 2014 – 2019</li>
-                        <li>
-                            Projektpartner sind der <a href="http://www.historische.kulturwissenschaften.uni-mainz.de/">Forschungsschwerpunkt Historische Kulturwissenschaften</a>,
-                            das <a href="http://kompetenzzentrum.uni-trier.de/de/">Trier Center for Digital Humanities</a>
-                            und die <a href="http://www.digitale-akademie.de">Digitale Akademie</a>
-                        </li>
-                        <li>
-                            Kooperationspartner ist das <a href="http://www.stadtarchiv.augsburg.de/">Stadtarchiv Augsburg</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Editionsumgebung</h2>
-            <h3 class="red up-25">Basierend auf Transcribo und FUD</h3>
-            <div class="row">
-                <div class="seven columns">
-                    <div class="mfp-lightbox">
-                        <a href="resources/img/bmb_transcribo.png">
-                            <img src="resources/img/bmb_transcribo.png" alt="Screenshot" title="" width="100%" />
-                        </a>
-                    </div>
-                    <p class="small">
-                        Transkriptionsumgebung <a href="http://transcribo.org/de/">Transcribo</a>
-                    </p>
-                </div>
-                <div class="four columns">
-                    <div class="mfp-lightbox">
-                        <a href="resources/img/bmb_fud.png">
-                            <img src="resources/img/bmb_fud.png" alt="" title="" />
-                        </a>
-                    </div>
-                    <p class="small">Sacherschließung in <a href="http://fud.uni-trier.de/de/">FuD</a></p>
-                    <div class="mfp-lightbox">
-                    <a href="resources/img/bmb_typo3.png">
-                        <img src="resources/img/bmb_typo3.png" alt="" title="" />
-                    </a>
-                    </div>
-                    <p class="small">
-                        Import mit CHF Xmltool
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Digitale Edition</h2>
-            <h3 class="red up-25">Präsentationsschicht auf Basis von TYPO3/CHF</h3>
-            <div class="row">
-                <div class="seven columns">
-                    <div class="mfp-lightbox">
-                        <a href="resources/img/bmb_screenshot_01.png">
-                            <img src="resources/img/bmb_screenshot_01.png" alt="Screenshot" title="Startseite der Baumeisterbücher" width="100%" />
-                        </a>
-                    </div>
-                    <p class="small">
-                        Startseite der
-                        <a href="https://www.augsburger-baumeisterbuecher.de">
-                            Augsburger Baumeisterbücher
-                        </a>
-                    </p>
-                </div>
-                <div class="four columns">
-                    <div class="mfp-lightbox">
-                    <a href="resources/img/bmb_screenshot_02.png">
-                        <img src="resources/img/bmb_screenshot_02.png" alt="" title="" width="100%" />
-                    </a>
-                    </div>
-                    <p class="small">
-                        Editionsansicht
-                    </p>
-                    <div class="mfp-lightbox">
-                    <a href="resources/img/bmb_screenshot_03.png">
-                        <img src="resources/img/bmb_screenshot_03.png" alt="" title="" width="100%" />
-                    </a>
-                    </div>
-                    <p class="small">
-                        Registeransicht
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="step">
-            <div class="centered">
-                <h1>F I N I S</h1>
-                <h2>Danke für die Aufmerksamkeit</h2>
-            </div>
-        </div>
-
-        <div class="step">
-            <h2>Links, Software &amp; Nachnutzung</h2>
-
-            <h4>Links zu den genannten Portalen</h4>
-
-            <ul class="small pull-up">
-                <li>
-                    <a href="https://www.augsburger-baumeisterbuecher.de">
-                        Augsburger Baumeisterbücher
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.controversia-et-confessio.de/">
-                        Controversia et Confessio
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.corpusvitrearum.de">
-                        Corpus Vitrearum Medii Aevi
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.inschriften.net">
-                        Deutsche Inschriften Online
-                    </a>
-                </li>
-                <li>
-                    <a href="http://namenforschung.net">
-                        Digitales Familiennamenwörterbuch Deutschlands
-                    </a>
-                </li>
-                <li>
-                    <a href="http://gluck-gesamtausgabe.de">
-                        Gluck Gesamtausgabe
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.regesta-imperii.de">
-                        Regesta Imperii Online
-                    </a>
-                </li>
-            </ul>
-
-            <h4>Benutze Software</h4>
-
-            <ul class="small pull-up">
-                <li>
-                    <a href="https://github.com/impress/impress.js">Impress.js</a> (Presentation)
-                </li>
-                <li>
-                    <a href="https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans">Open Sans</a> (Google Font)
-                </li>
-                <li>
-                    <a href="https://github.com/dimsemenov/Magnific-Popup">Magnific Popup</a> (Lightbox)
-                </li>
-                <li>
-                    <a href="http://idangero.us/swiper/">Swiper</a> (Responsiver Slider)
-                </li>
-                <li>
-                    <a href="http://unitegallery.net/">Unite Gallery</a> (Bildergallerie)
-                </li>
-            </ul>
-
-            <h4>Lizenzhinweis</h4>
-            <ul class="small pull-up">
-                <li>
-                    Link:
-                    <a href="https://digicademy.github.io/2017-editionsportale-jena">
-                        https://digicademy.github.io/2017-editionsportale-jena
-                    </a>
-                </li>
-                <li>
-                    Lizenz: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, Torsten Schrade
-                </li>
-            </ul>
-        </div>
-
+                      </div>
+                  </div>
     </div>
 
     <!-- jquery -->
     <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
 
-    <!-- unite gallery -->
-    <script type="text/javascript" src="vendor/unitegallery/js/unitegallery.min.js"></script>
-    <script type="text/javascript" src="vendor/unitegallery/themes/tiles/ug-theme-tiles.js"></script>
-    <script type="text/javascript" src="resources/js/unite.gallery.js"></script>
+    <!-- chartist -->
+    <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+    <script src="resources/js/chartist.charts.js"></script>
 
-    <!-- swiper -->
-    <script src="vendor/swiper/swiper.min.js"></script>
+    <!-- codemirror -->
+    <script src="vendor/codemirror/lib/codemirror.js"></script>
+    <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            spaceBetween: 30,
-            hashnav: true
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
         });
     </script>
+
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="resources/js/hljs.linenumbering.js"></script>
 
     <!-- magnific popup -->
     <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
