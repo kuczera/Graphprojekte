@@ -1,6 +1,6 @@
-# Anwendungsbeispiele für Graphdatenbanken in Projekten der Digitalen Akademie
+# Vernetztes Wissen - Chancen und Herausforderungen für die digitalen Geisteswissenschaften
 
-## Ein Werkstattbericht
+## Beispiele für Graphmodellierungen in den digitalen Geisteswissenschaften
 
 ### Andreas Kuczera
 
