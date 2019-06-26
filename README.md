@@ -1,4 +1,4 @@
-# Vernetztes Wissen - Chancen und Herausforderungen für die digitalen Geisteswissenschaften
+# Vernetztes Wissen
 
 ## Beispiele für Graphmodellierungen in den digitalen Geisteswissenschaften
 
