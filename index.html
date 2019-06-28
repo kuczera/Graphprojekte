@@ -204,9 +204,11 @@
                                     mit 200 erschlossenen Personen
                                 </li>
                                 <li>
-<pre><code class="linenumbers js">MATCH (n:Keyword)<-[:KEYWORD]-(l:Letter)
+<pre><code class="linenumbers js">MATCH (n:Keyword)<-[:KEYWORD]-(l:Letter),
+MATCH (l)-[:SENDER]->(p:Person)
+MATCH (l)-[:RECEIVER]->(r)
 WHERE n.name = 'Häretiker'
-RETURN *;
+RETURN *
 </code></pre>
                                </li>
                             </ul>
