@@ -181,12 +181,11 @@
                                     mit 200 erschlossenen Personen
                                 </li>
                                 <li>
-<pre><code class="linenumbers js">MATCH (n:Keyword)<-[:KEYWORD]-(l:Letter),
-MATCH (l)-[:SENDER]->(p:Person)
-MATCH (l)-[:RECEIVER]->(r)
-WHERE n.name = 'Häretiker'
-RETURN *;
-</code></pre>
+<pre><code class="linenumbers js">MATCH (p1:Person {name:'Augustinus'})<-[r1:SENDER|RECEIVER]-(l:Letter)-[r2:SENDER|RECEIVER]->(p2:Person)
+MATCH (l)-[k1:KEYWORD]->(k:Keyword)
+RETURN p1.name AS name1, count(r1) AS Anzahl, 
+p2.name AS Name2, COLLECT(DISTINCT k.name) AS Keywords
+ORDER BY Anzahl DESC</code></pre>
                                </li>
                             </ul>
                             <p class="right">
