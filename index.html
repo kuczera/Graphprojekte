@@ -221,7 +221,7 @@ ORDER BY Anzahl DESC;</code></pre>
 
                 <div class="six columns last">
                                 <ul class="even-left medium">
-                                    <li class="substep">
+                                    <li>
                                       <li>
                                         Das Projekt sammelt schriftlich belegte Personen von 400 bis 800 n. Chr.
                                       </li>
@@ -273,7 +273,7 @@ RETURN *;</code></pre>
                     <div class="six columns last">
                                     <ul class="even-left medium">
                                           <li>
-                                            Deutschsprachige Zusammenfassungen (Regest) der rechtlich relevanten Inhalte von Kaiser-, König und Papsturkunden
+                                            Deutschsprachige Zusammenfassungen (<a href="http://www.regesta-imperii.de/id/cf75356b-bd0d-4a67-8aeb-3ae27d1dcefa">Regest</a>) der rechtlich relevanten Inhalte von Kaiser-, König und Papsturkunden
                                           </li>
                                           <li>
                                             Wurde 1829 vom Frankfurter Stadtbibliothekar Johann Friedrich Böhmer begründet
@@ -282,16 +282,16 @@ RETURN *;</code></pre>
                                             Inzwischen über 140.000 Regesten im Volltext online verfügbar
                                           </li>
                                           <li>
-                                            Register werden sukzessive <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/RI.html">digital aufgearbeitet</a> und eingebunden (<a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/bilder/RI-Regest-im-Graphen.png">Beispiel 1</a>, <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/bilder/Regesten-Graph-Beispiel.png">Beispiel 2</a>).
+                                            Register werden sukzessive digital aufgearbeitet und eingebunden (<a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/bilder/RI-Regest-im-Graphen.png">Beispiel 1</a>, <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/bilder/Regesten-Graph-Beispiel.png">Beispiel 2</a>).
                                           </li>
                                           <li>
-<pre><code class="linenumbers js">// Robert II.  von Flandern mit Netzwerk
+<pre><code class="linenumbers js">// Robert II. von Flandern mit Netzwerk
 MATCH (n:IndexPerson)-[:PERSON_IN]->(r:Regesta)<-[:PERSON_IN]-(m:IndexPerson)
 WHERE n.registerId = 'H4P01822'
 RETURN *;</code></pre>
                                           </li>
                                           <li>
-                                            <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/RI.html">Beispiel aus den Regesten Heinrichs IV.</a>
+                                            <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/RI.html">Beispielpräsentation mit den Regesten Kaiser Heinrichs IV.</a>
                                           </li>
                                       </ul>
                                     <p class="right">
