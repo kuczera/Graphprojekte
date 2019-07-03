@@ -183,7 +183,7 @@
                                 <li>
 <pre><code class="linenumbers js">MATCH (p1:Person {name:'Augustinus'})<-[r1:SENDER|RECEIVER]-(l:Letter)-[r2:SENDER|RECEIVER]->(p2:Person)
 MATCH (l)-[k1:KEYWORD]->(k:Keyword)
-RETURN p1.name AS name1, count(r1) AS Anzahl, 
+RETURN p1.name AS name1, count(r1) AS Anzahl,
 p2.name AS Name2, COLLECT(DISTINCT k.name) AS Keywords
 ORDER BY Anzahl DESC;</code></pre>
                                </li>
@@ -229,9 +229,12 @@ ORDER BY Anzahl DESC;</code></pre>
                                         U.a. werden die Belege und weitere Informationen zu den Personen gesammelt
                                       </li>
                                       <li>
-                                        Im Beispielgraph wurden Belege, Quellen, Personen und Verwandtschaft modelliert
+                                        Im <a href="resources/img/020-Verwandschaften.jpg">Beispielgraph</a> wurden Belege, Quellen, Personen und Verwandtschaft modelliert
                                       </li>
-<pre><code class="linenumbers js">MATCH (P:Person {nid:'7212'}) 
+                                      <li>
+                                        <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/NomenEtGens.html">Präsentation</a>
+                                      </li>
+<pre><code class="linenumbers js">MATCH (P:Person {nid:'7212'})
 RETURN *;</code></pre>
                                    </li>
                                 </ul>
