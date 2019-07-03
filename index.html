@@ -181,7 +181,9 @@
                                     mit 200 erschlossenen Personen
                                 </li>
                                 <li>
-<pre><code class="linenumbers js">MATCH (n:Keyword)<-[:KEYWORD]-(l:Letter)
+<pre><code class="linenumbers js">MATCH (n:Keyword)<-[:KEYWORD]-(l:Letter),
+MATCH (l)-[:SENDER]->(p:Person)
+MATCH (l)-[:RECEIVER]->(r)
 WHERE n.name = 'Häretiker'
 RETURN *;
 </code></pre>
@@ -222,7 +224,7 @@ RETURN *;
                                 <ul class="even-left medium">
                                     <li class="substep">
                                       <li>
-                                        Das Projekt sammelt schriftlich belegte Personen von 400 bis 800
+                                        Das Projekt sammelt schriftlich belegte Personen von 400 bis 800 n. Chr.
                                       </li>
                                       <li>
                                         U.a. werden die Belege und weitere Informationen zu den Personen gesammelt
@@ -230,8 +232,8 @@ RETURN *;
                                       <li>
                                         Im Beispielgraph wurden Belege, Quellen, Personen und Verwandtschaft modelliert
                                       </li>
-    <pre><code class="linenumbers js">MATCH (P:Person {nid:'7212'}) RETURN *;
-    </code></pre>
+<pre><code class="linenumbers js">MATCH (P:Person {nid:'7212'}) 
+RETURN *;</code></pre>
                                    </li>
                                 </ul>
                                 <p class="right">
@@ -277,9 +279,10 @@ RETURN *;
                                             Inzwischen über 140.000 Regesten im Volltext online verfügbar
                                           </li>
                                           <li>
-                                            Register werden sukzessive digital aufgearbeitet und eingebunden
+                                            Register werden sukzessive <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/RI.html">digital aufgearbeitet</a> und eingebunden (<a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/bilder/RI-Regest-im-Graphen.png">Beispiel 1</a>, <a href="https://digitale-methodik.adwmainz.net/mod5/5c/slides/graphentechnologien/bilder/Regesten-Graph-Beispiel.png">Beispiel 2</a>).
                                           </li>
-                                          <li><pre><code class="linenumbers js">// Robert II.  von Flandern mit Netzwerk
+                                          <li>
+<pre><code class="linenumbers js">// Robert II.  von Flandern mit Netzwerk
 MATCH (n:IndexPerson)-[:PERSON_IN]->(r:Regesta)<-[:PERSON_IN]-(m:IndexPerson)
 WHERE n.registerId = 'H4P01822'
 RETURN *;</code></pre>
@@ -332,7 +335,8 @@ RETURN *;</code></pre>
                                 <li>
                                     Im Graph werden die Figuren mit ihren Eigenschaften und ihrem Kontext modelliert. Damit werden diese Informationen für Maschinen auswertbar und vergleichbar.
                                 </li>
-                                <li><pre><code class="linenumbers js">MATCH (n1:IdentifiedScene {ISID:'3'})--(n2)--(n3)--(n4) RETURN *;</code></pre>
+                                <li>
+<pre><code class="linenumbers js">MATCH (n1:IdentifiedScene {ISID:'3'})--(n2)--(n3)--(n4) RETURN *;</code></pre>
                               </li>
                             </ul>
                             <p class="right">
