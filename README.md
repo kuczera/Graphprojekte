@@ -1,4 +1,4 @@
-# Vernetztes Wissen
+# Graphenmodellierungen in den digitalen Geisteswissenschaften
 
 ## Beispiele für Graphmodellierungen in den digitalen Geisteswissenschaften
 
